@@ -84,7 +84,7 @@ document.getElementById('generateCode').addEventListener('click', function(event
 
 
     // Construct the LinkData
-    const link = "://amp/preview/nativescreen/1.0.0/";
+    const link = "://amp/preview/";
 
     let linkData;
 
