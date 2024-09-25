@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>QR Code Generator</title>
+    <link rel="stylesheet" type="text/css" href="./index.css"/>
     <script src="qrious.min.js"></script>
     <script defer src="index.js" type="module"></script> <!-- Include your JavaScript file -->
 </head>
@@ -34,7 +35,7 @@
         <!--        Query Params-->
 
         <!--        AB Test-->
-        <div id="abTestRadio">
+        <div class="mt-24" id="abTestRadio">
             <label> AB Test:
                 <label>
                     <input name="abTest" type="radio" value="option.abTestVariant=a"> A Test?
@@ -49,7 +50,7 @@
         </div>
 
         <!--        In-Store-->
-        <div id="inStoreRadio">
+        <div class="mt-24" id="inStoreRadio">
             <label>In Store
                 <label>
                     <input name="inStore" type="radio" value="filter.inStore=true"> True
@@ -63,52 +64,7 @@
             </label>
         </div>
 
-        <!--        Purchase Recency-->
-        <div id="purchaseRecencyRadio">
-            <label>Purchase Recency:
-                <!--                Fulfillment Type-->
-                <div id="fulfillmentTypeRadio">
-                    <label>Fulfillment Type:</label>
-                    <label>
-                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=instacart"> Instacart
-                    </label>
-                    <label>
-                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=delivery"> Delivery
-                    </label>
-                    <label>
-                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=ship"> Ship
-                    </label>
-                    <label>
-                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=pickup"> Pickup
-                    </label>
-                    <label>
-                        <input checked name="fulfillmentType" type="radio" value=""> None
-                    </label>
-                </div>
-                <div id="recencyRadio">
-                    <label>Recency:</label>
-                    <label>
-                        <input name="recency" type="radio" value="option.recency=any"> Any
-                    </label>
-                    <label>
-                        <input name="recency" type="radio" value="option.recency=active"> Active
-                    </label>
-                    <label>
-                        <input name="recency" type="radio" value="option.recency=lapsed"> Lapsed
-                    </label>
-                    <label>
-                        <input name="recency" type="radio" value="option.recency=lost"> Lost
-                    </label>
-                    <label>
-                        <input name="recency" type="radio" value="option.recency=never"> Never
-                    </label>
-                    <label>
-                        <input checked name="recency" type="radio" value=""> None
-                    </label>
-                </div>
-            </label>
-        </div>
-        <div id="modalityRadio">
+        <div class="mt-24" id="modalityRadio">
             <label>Modality:</label>
             <label>
                 <input name="modality" type="radio" value="option.modality=delivery"> Delivery
@@ -127,29 +83,126 @@
             </label>
         </div>
 
-        <div id="boostStatus">
-            <label>Boost Status:</label>
-            <label>
-                <input name="boostStatus" type="radio" value="option.boostStatus=active"> Active
-            </label>
-            <label>
-                <input name="boostStatus" type="radio" value="option.boostStatus=expired"> Expired
-            </label>
-            <label>
-                <input name="boostStatus" type="radio" value="option.boostStatus=never"> Never
-            </label>
-            <label>
-                <input checked name="boostStatus" type="radio" value=""> None
+        <!--        Purchase Recency-->
+        <div class="mt-24" id="purchaseRecencyRadio">
+            <label class="newRow">Purchase Recency: </label>
+            <!--                Fulfillment Type-->
+            <div id="fulfillmentTypeRadio">
+                <label>Fulfillment Type:</label>
+                <label>
+                    <input name="fulfillmentType" type="radio" value="option.fulfillmentType=instacart"> Instacart
+                </label>
+                <label>
+                    <input name="fulfillmentType" type="radio" value="option.fulfillmentType=delivery"> Delivery
+                </label>
+                <label>
+                    <input name="fulfillmentType" type="radio" value="option.fulfillmentType=ship"> Ship
+                </label>
+                <label>
+                    <input name="fulfillmentType" type="radio" value="option.fulfillmentType=pickup"> Pickup
+                </label>
+                <label>
+                    <input checked name="fulfillmentType" type="radio" value=""> None
+                </label>
+            </div>
+            <div id="recencyRadio">
+                <label>Recency:</label>
+                <label>
+                    <input name="recency" type="radio" value="option.recency=any"> Any
+                </label>
+                <label>
+                    <input name="recency" type="radio" value="option.recency=active"> Active
+                </label>
+                <label>
+                    <input name="recency" type="radio" value="option.recency=lapsed"> Lapsed
+                </label>
+                <label>
+                    <input name="recency" type="radio" value="option.recency=lost"> Lost
+                </label>
+                <label>
+                    <input name="recency" type="radio" value="option.recency=never"> Never
+                </label>
+                <label>
+                    <input checked name="recency" type="radio" value=""> None
+                </label>
+            </div>
             </label>
         </div>
 
+        <div class="mt-24" id="boostOptions">
+            <label class="newRow">Boost Options:</label>
+            <div id="boostStatus">
+                <label>Boost Status:</label>
+                <label>
+                    <input name="boostStatus" type="radio" value="option.boostStatus=active"> Active
+                </label>
+                <label>
+                    <input name="boostStatus" type="radio" value="option.boostStatus=expired"> Expired
+                </label>
+                <label>
+                    <input name="boostStatus" type="radio" value="option.boostStatus=never"> Never
+                </label>
+                <label>
+                    <input checked name="boostStatus" type="radio" value=""> None
+                </label>
+            </div>
+
+            <div id="membershipTier">
+                <label>Membership Tier:</label>
+                <label>
+                    <input name="membershipTier" type="radio" value="option.membershipTier=bst"> BST
+                </label>
+                <label>
+                    <input name="membershipTier" type="radio" value="option.membershipTier=bstl"> BSTL
+                </label>
+                <label>
+                    <input checked name="membershipTier" type="radio" value=""> None
+                </label>
+            </div>
+
+            <div id="streamingRedemption">
+                <label>Streaming Redemption</label>
+                <label>
+                    <input name="streamingRedemption" type="radio"
+                           value="option.streamingTWDCRedemptionStatus=eligible"> Eligible
+                </label>
+                <label>
+                    <input name="streamingRedemption" type="radio"
+                           value="option.streamingTWDCRedemptionStatus=ineligible"> Ineligible
+                </label>
+                <label>
+                    <input name="streamingRedemption" type="radio" value="option.streamingTWDCRedemptionStatus=active">
+                    Active
+                </label>
+                <label>
+                    <input name="streamingRedemption" type="radio"
+                           value="option.streamingTWDCRedemptionStatus=redeemed"> Redeemed
+                </label>
+                <label>
+                    <input checked name="streamingRedemption" type="radio" value=""> None
+                </label>
+            </div>
+
+            <div id="renewalFrequency">
+                <label>Renewal Frequency</label>
+                <label>
+                    <input name="renewalFrequency" type="radio" value="option.renewalFrequency=yearly"> Yearly
+                </label>
+                <label>
+                    <input name="renewalFrequency" type="radio" value="option.renewalFrequency=monthly"> Monthly
+                </label>
+                <label>
+                    <input checked name="renewalFrequency" type="radio" value=""> None
+                </label>
+            </div>
+        </div>
 
 
-        <button id="generateCode" type="button">Generate QR Code</button>
+        <button class="mt-24" id="generateCode" type="button">Generate QR Code</button>
     </fieldset>
 </form>
 
 <canvas id="qrCodeCanvas" style="display: none;"></canvas>
-<img style="margin-top: 40px; margin-left: 40px;" id="qrCodeImage" style="display: none;"/>
+<img class="mt-40 ml-40" id="qrCodeImage" style="display: none;"/>
 </body>
 </html>

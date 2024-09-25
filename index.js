@@ -11,6 +11,9 @@ document.getElementById('generateCode').addEventListener('click', function(event
     const recencyRadioButtons = document.getElementsByName('recency');
     const modalityRadioButtons = document.getElementsByName('modality');
     const boostRadioButtons = document.getElementsByName('boostStatus');
+    const membershipTierButtons = document.getElementsByName('membershipTier');
+    const streamingRedemptionButtons = document.getElementsByName('streamingRedemption');
+    const renewalFrequencyButtons = document.getElementsByName('renewalFrequency');
 
     let params = [];
     let abTest = ""; // Initialize abTest
@@ -79,6 +82,38 @@ document.getElementById('generateCode').addEventListener('click', function(event
         }
     }
 
+    let membership = "";
+    for (const radio of membershipTierButtons) {
+        if (radio.checked) {
+            membership = radio.value;
+            if (membership !== ""){
+                params.push(membership);
+            }
+            break;
+        }
+    }
+
+    let streamingRedemption = "";
+    for (const radio of streamingRedemptionButtons) {
+        if (radio.checked) {
+            streamingRedemption = radio.value;
+            if (streamingRedemption !== ""){
+                params.push(streamingRedemption);
+            }
+            break;
+        }
+    }
+
+    let renewalFrequency = "";
+    for (const radio of renewalFrequencyButtons) {
+        if (radio.checked) {
+            renewalFrequency = radio.value;
+            if (renewalFrequency !== ""){
+                params.push(renewalFrequency);
+            }
+            break;
+        }
+    }
 
     // Check for empty fields
 
