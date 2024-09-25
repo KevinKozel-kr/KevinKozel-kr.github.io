@@ -1,0 +1,8 @@
+version: 1.0.0
+files:
+  - url: QR-Generator-V2-1.0.0-arm64.dmg
+    sha512: wwj6X6qJ/66iFRF/qqmKV95jRWFiocmO/6T8Re1WaeT6kRgItPHe3z70ryE/Xqt55btE/KgMlyZ9QBvRkXbnKw==
+    size: 98053666
+path: QR-Generator-V2-1.0.0-arm64.dmg
+sha512: wwj6X6qJ/66iFRF/qqmKV95jRWFiocmO/6T8Re1WaeT6kRgItPHe3z70ryE/Xqt55btE/KgMlyZ9QBvRkXbnKw==
+releaseDate: '2024-09-24T18:37:33.566Z'

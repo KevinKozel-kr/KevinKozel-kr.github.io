@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.kroger.qrgenerator
+productName: QR Generator V2
+mac:
+  category: public.app-category.utilities
+  target:
+    - dmg
+  sign: false
+files: []
+electronVersion: 32.1.2

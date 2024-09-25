@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>QR Code Generator</title>
+    <script src="../node_modules/qrious/dist/qrious.js"></script>
+    <script defer src="index.js" type="module"></script> <!-- Include your JavaScript file -->
+</head>
+<body>
+<form>
+    <fieldset>
+        <label for="banner">Choose Banner:</label>
+        <select id="banner">
+            <option value="kroger">Kroger</option>
+            <option value="citymarket">City Market</option>
+            <option value="food4less">Food4Less</option>
+            <option value="foodsco">FoodsCo</option>
+            <option value="fredmeyer">FredMeyer</option>
+            <option value="frysfood">Frys Food</option>
+            <option value="gerbes">Gerbes</option>
+            <option value="harristeeter">Harris Teeter</option>
+            <option value="jaycfoods">Jay C Foods</option>
+            <option value="kingscoopers">King Scoopers</option>
+            <option value="metromarket">Metro Market</option>
+            <option value="ralphs">Ralphs</option>
+            <option value="smithsfoodanddrug">Smith's Food and Drug</option>
+            <option value="marianos">Marianos</option>
+        </select>
+        <!--        Get the URL-->
+        <input id="variantInput" placeholder="Enter URL" type="text"/>
+
+        <!--        Query Params-->
+
+        <!--        AB Test-->
+        <div id="abTestRadio">
+            <label> AB Test:
+                <label>
+                    <input name="abTest" type="radio" value="option.abTestVariant=a"> A Test?
+                </label>
+                <label>
+                    <input name="abTest" type="radio" value="option.abTestVariant=b"> B Test?
+                </label>
+                <label>
+                    <input checked name="abTest" type="radio" value=""> None
+                </label>
+            </label>
+        </div>
+
+        <!--        In-Store-->
+        <div id="inStoreRadio">
+            <label>In Store
+                <label>
+                    <input name="inStore" type="radio" value="filter.inStore=true"> True
+                </label>
+                <label>
+                    <input name="inStore" type="radio" value="filter.inStore=false"> False
+                </label>
+                <label>
+                    <input checked name="inStore" type="radio" value=""> None
+                </label>
+            </label>
+        </div>
+
+        <!--        Purchase Recency-->
+        <div id="purchaseRecencyRadio">
+            <label>Purchase Recency:
+                <!--                Fulfillment Type-->
+                <div id="fulfillmentTypeRadio">
+                    <label>Fulfillment Type:</label>
+                    <label>
+                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=instacart"> Instacart
+                    </label>
+                    <label>
+                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=delivery"> Delivery
+                    </label>
+                    <label>
+                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=ship"> Ship
+                    </label>
+                    <label>
+                        <input name="fulfillmentType" type="radio" value="option.fulfillmentType=pickup"> Pickup
+                    </label>
+                    <label>
+                        <input checked name="fulfillmentType" type="radio" value=""> None
+                    </label>
+                </div>
+                <div id="recencyRadio">
+                    <label>Recency:</label>
+                    <label>
+                        <input name="recency" type="radio" value="option.recency=any"> Any
+                    </label>
+                    <label>
+                        <input name="recency" type="radio" value="option.recency=active"> Active
+                    </label>
+                    <label>
+                        <input name="recency" type="radio" value="option.recency=lapsed"> Lapsed
+                    </label>
+                    <label>
+                        <input name="recency" type="radio" value="option.recency=lost"> Lost
+                    </label>
+                    <label>
+                        <input name="recency" type="radio" value="option.recency=never"> Never
+                    </label>
+                    <label>
+                        <input checked name="recency" type="radio" value=""> None
+                    </label>
+                </div>
+            </label>
+        </div>
+        <div id="modalityRadio">
+            <label>Modality:</label>
+            <label>
+                <input name="modality" type="radio" value="option.modality=delivery"> Delivery
+            </label>
+            <label>
+                <input name="modality" type="radio" value="option.modality=in-store"> In-Store
+            </label>
+            <label>
+                <input name="modality" type="radio" value="option.modality=ship"> Ship
+            </label>
+            <label>
+                <input name="modality" type="radio" value="option.modality=pickup"> Pickup
+            </label>
+            <label>
+                <input checked name="modality" type="radio" value=""> None
+            </label>
+        </div>
+
+        <div id="boostStatus">
+            <label>Boost Status:</label>
+            <label>
+                <input name="boostStatus" type="radio" value="option.boostStatus=active"> Delivery
+            </label>
+            <label>
+                <input name="boostStatus" type="radio" value="option.boostStatus=expired"> Expired
+            </label>
+            <label>
+                <input name="boostStatus" type="radio" value="option.boostStatus=never"> Never
+            </label>
+            <label>
+                <input checked name="boostStatus" type="radio" value=""> None
+            </label>
+        </div>
+
+
+
+        <button id="generateCode" type="button">Generate QR Code</button>
+    </fieldset>
+</form>
+
+<canvas id="qrCodeCanvas" style="display: none;"></canvas>
+<img id="qrCodeImage" style="display: none;"/>
+</body>
+</html>
