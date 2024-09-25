@@ -5,8 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>QR Code Generator</title>
-    <script src="../node_modules/qrious/dist/qrious.js"></script>
-    <script defer src="index.js" type="module"></script> <!-- Include your JavaScript file -->
+    <script src="node_modules/qrious/dist/qrious.js"></script>
+    <script defer src="./src/index.js" type="module"></script> <!-- Include your JavaScript file -->
 </head>
 <body>
 <form>
@@ -130,7 +130,7 @@
         <div id="boostStatus">
             <label>Boost Status:</label>
             <label>
-                <input name="boostStatus" type="radio" value="option.boostStatus=active"> Delivery
+                <input name="boostStatus" type="radio" value="option.boostStatus=active"> Active
             </label>
             <label>
                 <input name="boostStatus" type="radio" value="option.boostStatus=expired"> Expired
