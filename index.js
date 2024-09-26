@@ -82,40 +82,27 @@ document.getElementById('generateCode').addEventListener('click', function(event
         }
     }
 
-    let membership = "";
-    for (const radio of membershipTierButtons) {
-        if (radio.checked) {
-            membership = radio.value;
-            if (membership !== ""){
-                params.push(membership);
-            }
-            break;
+    for(let i=0; i < membershipTierButtons.length; i++){
+        if (membershipTierButtons[i].checked){
+            params.push(membershipTierButtons[i].value)
         }
     }
 
-    let streamingRedemption = "";
-    for (const radio of streamingRedemptionButtons) {
-        if (radio.checked) {
-            streamingRedemption = radio.value;
-            if (streamingRedemption !== ""){
-                params.push(streamingRedemption);
-            }
-            break;
+
+    for(let i=0; i < streamingRedemptionButtons.length; i++){
+        if (streamingRedemptionButtons[i].checked){
+            params.push(streamingRedemptionButtons[i].value)
         }
     }
 
-    let renewalFrequency = "";
-    for (const radio of renewalFrequencyButtons) {
-        if (radio.checked) {
-            renewalFrequency = radio.value;
-            if (renewalFrequency !== ""){
-                params.push(renewalFrequency);
-            }
-            break;
+
+    for(let i=0; i < renewalFrequencyButtons.length; i++){
+        if (renewalFrequencyButtons[i].checked){
+            params.push(renewalFrequencyButtons[i].value)
         }
     }
 
-    // Check for empty fields
+
 
 
     // Construct the LinkData
