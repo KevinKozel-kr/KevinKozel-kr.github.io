@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e958c8-d64d-4f8a-bd61-b6354c1843c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="css-addition" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +96,9 @@
       <option name="presentableId" value="Default" />
       <updated>1727230888402</updated>
       <workItem from="1727230889439" duration="5454000" />
-      <workItem from="1727282488357" duration="5885000" />
+      <workItem from="1727282488357" duration="9634000" />
+      <workItem from="1727358897420" duration="51000" />
+      <workItem from="1727358955879" duration="1358000" />
     </task>
     <servers />
   </component>
@@ -116,7 +116,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="additionalBoost" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
