@@ -32,6 +32,14 @@
         <!--        Get the URL-->
         <input id="variantInput" placeholder="Enter URL" type="text"/>
 
+        <label>Preview Or Published</label>
+        <label>
+            <input checked name="pageType" type="radio" value="true"> Preview
+        </label>
+        <label>
+            <input name="pageType" type="radio" value="false"> Published
+        </label>
+
         <!--        Query Params-->
 
         <!--        AB Test-->
@@ -164,15 +172,15 @@
                 <label>Streaming Redemption</label>
                 <label>
                     <input name="streamingRedemption" type="checkbox"
-                           value="option.streamingTWDCRedemptionStatus=eligible"> Eligible
+                           value="option.streamingTWDCRedemptionStatus=available"> Available
                 </label>
                 <label>
                     <input name="streamingRedemption" type="checkbox"
                            value="option.streamingTWDCRedemptionStatus=ineligible"> Ineligible
                 </label>
                 <label>
-                    <input name="streamingRedemption" type="checkbox" value="option.streamingTWDCRedemptionStatus=active">
-                    Active
+                    <input name="streamingRedemption" type="checkbox" value="option.streamingTWDCRedemptionStatus=activated">
+                    Activated
                 </label>
                 <label>
                     <input name="streamingRedemption" type="checkbox"
@@ -194,7 +202,7 @@
 
         <button class="mt-24" id="generateCode" type="button">Generate QR Code</button>
 
-        <button class="mt-24" id="generateLivePage" type="button">Generate QR for Published Page</button>
+
     </fieldset>
 </form>
 
