@@ -62,7 +62,7 @@ function GenerateCode() {
     }
 
     previewLink = FillUserSelections(previewType, previewLink);
-
+    console.log(previewLink)
     if (previewLink === 'true'){
         link = "://amp/preview/";
     }
@@ -79,6 +79,7 @@ function GenerateCode() {
 
         linkData = `${banner}${link}${variant}${queryString}`;
     }
+    console.log(linkData)
 
     // Clear previous QR code
     let qrCodeContainer = document.getElementById('qrCodeCanvas');
